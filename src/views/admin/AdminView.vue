@@ -83,7 +83,14 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
+import { useProducts } from '../../modules/useProducts'
 
+const { products, fetchProducts } = useProducts()
+
+onMounted(() => {
+  console.log('Admin view mounted')
+})
 </script>
 
 <style scoped>
