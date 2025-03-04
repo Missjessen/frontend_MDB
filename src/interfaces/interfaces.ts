@@ -9,8 +9,11 @@ export type Product = {
   isONdiscount: boolean;
   discountPct: number;
   isHidden: boolean;
+  _createdBy: string;
 
 }
+
+export type newProducts = Omit<Product, '_id'> & { _createdBy?: string }
 
 export type User =
 {
