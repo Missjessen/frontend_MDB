@@ -26,3 +26,14 @@ createdAt: string
 
 
 }
+
+export type Event = {
+  title: string;
+  date: Date;
+  eventlocation: string;
+  description: string;
+  maxAttendees: number;
+  attendees: string;
+  createdBy: string;
+
+}
