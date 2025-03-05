@@ -65,14 +65,14 @@
           </div>
           <input type="text" v-model="product.imageURL" placeholder="Image URL" class="p-2 border rounded h-10" /> <!-- Image URL -->
           <span>
-            Thumbnail img: <img :src="product.imageURL" alt="Product Image" class="w-full h-24 w-24 object-cover mb-4 rounded-lg"> <!-- Product image -->
+            Thumbnail img: <img :src="product.imageURL" alt="Product Image" class="h-24 w-24 object-cover mb-4 rounded-lg"> <!-- Product image -->
           </span>
         </div>
 
         <div class="mt-4 flex space-x-2"> <!-- Update and delete buttons -->
           <p>ID:  </p> <!-- Product ID for testing -->
           <button  @click="deleteProduct(product._id)" class="bg-red-600 text-white p-2 rounded hover:bg-red-700">Delete</button> <!-- Delete button -->
-          <button @click="updateProductHandler" class="bg-green-600 text-white p-2 rounded hover:bg-green-700">Edit</button> <!-- Edit button -->
+          <!-- <button @click="updateProductHandler" class="bg-green-600 text-white p-2 rounded hover:bg-green-700">Edit</button> Edit button -->
          </div>
       </div>
     </div>
@@ -83,13 +83,13 @@
 </template>
 
 <script setup lang="ts">
-import type { Product} from '../../interfaces/interfaces';
+//import type { Product} from '../../interfaces/interfaces';
 import { ref } from 'vue'
 import { onMounted } from 'vue'
 import { useProducts } from '../../modules/useProducts'
 
 
-const { products, error, loading,  fetchProducts, deleteProduct, addProducts, getTokenAndUserId, updateProduct } = useProducts()
+const { products, error, loading,  fetchProducts, deleteProduct, addProducts, getTokenAndUserId /*updateProduct*/ } = useProducts()
 
 onMounted(() => {
   fetchProducts();
@@ -117,7 +117,7 @@ const addProductHandler = async () => {
 }
 }
 
-
+/*
 const updateProductHandler = async (product: Product) => {
   const updateProduct = {
     name: product.name,
@@ -131,7 +131,7 @@ const updateProductHandler = async (product: Product) => {
     _createdBy: product._createdBy
   }
   await updateProduct(product._id, updateProduct)
-}
+} */
 
 </script>
 
