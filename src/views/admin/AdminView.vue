@@ -83,6 +83,7 @@
 </template>
 
 <script setup lang="ts">
+import type { Product} from '../../interfaces/interfaces';
 import { ref } from 'vue'
 import { onMounted } from 'vue'
 import { useProducts } from '../../modules/useProducts'

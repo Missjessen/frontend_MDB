@@ -2,7 +2,7 @@ import { ref } from 'vue';
 import type { User } from '../../interfaces/interfaces';
 
 
-const API_URL = import.meta.env.VITE_API_URL; 
+const API_URL = import.meta.env.VITE_API_URL;
 
 export const useUser = () => {
 
