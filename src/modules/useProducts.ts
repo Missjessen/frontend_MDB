@@ -125,7 +125,6 @@ const removeProductFromState = (id: string): void => {
       await deleteProductFromServer(id, token);
       removeProductFromState(id);
 
-      console.log("id test", id)
     }
 
 
